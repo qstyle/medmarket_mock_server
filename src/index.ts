@@ -4,7 +4,7 @@ import {randomName} from './user'
 
 
 const app = express()
-const port = process.env
+const port = process.env.PORT || 3030
 
 
 app.get('/users', async (_, res) => {
