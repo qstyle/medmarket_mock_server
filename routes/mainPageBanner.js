@@ -13,7 +13,7 @@ console.log(process.env.BASE_URL)
     title: 'Title Banner228' ,
     titleDesc: "Title Banner Description!",
     description: 'Banner description Banner description Banner description Banner description',
-    background: `http://${process.env.BASE_URL}/mainPageBanner/background`
+    background: `${process.env.BASE_URL}/mainPageBanner/background`
   })
 });
 
