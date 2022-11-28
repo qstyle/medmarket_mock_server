@@ -7,18 +7,27 @@ filePath = path.join(__dirname, "./banner1.jpg")
 
 
 router.get("/", async (_, res) => {
-console.log(process.env.BASE_URL)
 
-  return res.status(200).json({
-    title: 'Title Banner228' ,
-    titleDesc: "Title Banner Description!",
+  return res.status(200).json([{
+    title: 'Title Banner1' ,
+    titleDesc: "Title Banner Description! 1",
     description: 'Banner description Banner description Banner description Banner description',
     background: `${process.env.BASE_URL}/mainPageBanner/background`
-  })
+  }, {
+    title: 'Title Banner2' ,
+    titleDesc: "Title Banner Description! 2",
+    description: 'Banner description Banner description Banner description Banner description',
+    background: `${process.env.BASE_URL}/mainPageBanner/background`
+  }, {
+    title: 'Title Banner3' ,
+    titleDesc: "Title Banner Description! 3",
+    description: 'Banner description Banner description Banner description Banner description',
+    background: `${process.env.BASE_URL}/mainPageBanner/background`
+  }])
 });
 
 
-router.get("/background", async (_, res)=>{
+router.get("/background", async (_, res) => {
   res.setHeader("Content-Type", "image/jpg");
 
   require("fs").readFile(filePath, (_, image) => {
