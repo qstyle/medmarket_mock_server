@@ -1,6 +1,7 @@
 const express = require("express");
 const user = require("./routes/user");
 const mainPageBanner = require("./routes/mainPageBanner");
+const dotenv = require('dotenv').config()
 
 const app = express();
 app.use(express.json());
