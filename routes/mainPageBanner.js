@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require('fs')
 
 path = require('path'),    
-filePath = path.join(__dirname, "./banner1.jpg")
+filePath = path.join(__dirname, "./public/sliderBackground.jpg")
 
 
 router.get("/", async (_, res) => {
